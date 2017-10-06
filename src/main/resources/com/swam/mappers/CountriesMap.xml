@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.swam.mappers.CountriesMap">
+    <select id="select" resultType="Map">
+        SELECT * FROM KAZ01SCM.KAA11T_KOZA_TBL
+        WHERE SRV_CD = '0900' AND KOZA_ID_CD = '09002001000010'
+    </select>
+</mapper>

@@ -1,0 +1,36 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://spring.io/guides/gs-producing-web-service"
+           targetNamespace="http://spring.io/guides/gs-producing-web-service" elementFormDefault="qualified">
+
+    <xs:element name="getUserparaRequest">
+        <xs:complexType>
+            <xs:sequence>
+            
+                <xs:element name="id" type="xs:string"/>
+                <xs:element name="method" type="xs:string"/>
+                <xs:element name="username" type="xs:string"/>
+                <xs:element name="playername" type="xs:string"/>
+                <xs:element name="code" type="xs:int"/>
+                <xs:element name="left" type="xs:int"/>
+                <xs:element name="fire" type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getUserparaResponse">
+        <xs:complexType>
+            <xs:sequence>                
+            	<xs:element name="username" type="xs:string"/>
+                <xs:element name="playername" type="xs:string"/>
+                <xs:element name="code" type="xs:int"/>
+                <xs:element name="left" type="xs:int"/>
+                <xs:element name="fire" type="xs:boolean"/>
+                <xs:element name="userlist" type="tns:valuelist"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:simpleType name="valuelist">
+  		<xs:list itemType="xs:string"/>
+	</xs:simpleType>
+
+</xs:schema>
